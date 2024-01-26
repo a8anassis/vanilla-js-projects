@@ -1,0 +1,8 @@
+main > div {
+    height: calc(90vh);
+}
+
+.text-lg {
+    font-size: 4rem;
+    font-weight: 400;
+}
