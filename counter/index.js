@@ -57,7 +57,7 @@ function onIncreaseClicked() {
  * Actions include reseting the counter.
  */
 function onResetClicked() {
-    resetCounter(counter)
+    resetCounter()
 }
 
 // Model
