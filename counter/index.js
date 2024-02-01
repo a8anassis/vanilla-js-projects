@@ -2,8 +2,6 @@
 const DEFAULT = 0
 let counter = DEFAULT
 
-    
-    
 
 window.addEventListener('DOMContentLoaded', function() {
     
@@ -83,7 +81,7 @@ function increaseCounter() {
  */
 function resetCounter() {
     counter = DEFAULT 
-    showCounter(counter)
+    showCounter()
 }
 
 // View
@@ -93,7 +91,7 @@ function resetCounter() {
  * and styles accordingly. 
  * @param {Number|String} counter - the counter value
  */
-function showCounter(counter) {
+function showCounter() {
     const counterDOM = document.querySelector('#counter')
     counterDOM.innerHTML = counter
     styleCounter(counterDOM)
