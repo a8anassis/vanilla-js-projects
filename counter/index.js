@@ -101,13 +101,16 @@ function showCounter(counter) {
  * @param {Number} counter - the counter value 
  */
 function styleCounter(counter) {
-    if (counter > 0 ) {
-        counterDOM.style.color = 'green'
-    } else if (counter < 0) {
-        counterDOM.style.color = 'red'
-    } else {
-        counterDOM.style.color = 'black'
-    }
+   // if (counter > 0 ) {
+        // counterDOM.style.color = 'green'
+        counterDOM.classList.toggle('green', counter > 0);
+   // } else if (counter < 0) {
+        // counterDOM.style.color = 'red'
+        counterDOM.classList.toggle('red', counter < 0);
+   // } else {
+        // counterDOM.style.color = 'black'
+        counterDOM.classList.toggle('black', counter === 0);
+   // }
 }
 
 
