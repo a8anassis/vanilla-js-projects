@@ -2,13 +2,17 @@
 const DEFAULT = 0
 let counter = DEFAULT
 
-const counterDOM = document.querySelector('#counter')
-const btns = document.querySelectorAll('.btn')
-const btnDecr = document.querySelector('#btnDecr')
-const btnReset = document.querySelector('#btnReset')
-const btnIncr = document.querySelector('#btnIncr')
+    
+    
 
-/**
+window.addEventListener('DOMContentLoaded', function() {
+    
+    const btns = document.querySelectorAll('.btn')
+    const btnDecr = document.querySelector('#btnDecr')
+    const btnReset = document.querySelector('#btnReset')
+    const btnIncr = document.querySelector('#btnIncr')
+
+    /**
  * Listener
  */
 // btns.forEach(function(btn) {
@@ -22,10 +26,11 @@ const btnIncr = document.querySelector('#btnIncr')
 //         }
 //     })
 // })
-
-btnDecr.addEventListener('click', () => onDecreaseClicked())
-btnReset.addEventListener('click', () => onResetClicked())
-btnIncr.addEventListener('click', () => onIncreaseClicked())
+    
+    btnDecr.addEventListener('click', () => onDecreaseClicked())
+    btnReset.addEventListener('click', () => onResetClicked())
+    btnIncr.addEventListener('click', () => onIncreaseClicked())
+})
 
 
 
@@ -89,8 +94,9 @@ function resetCounter() {
  * @param {Number|String} counter - the counter value
  */
 function showCounter(counter) {
+    const counterDOM = document.querySelector('#counter')
     counterDOM.innerHTML = counter
-    styleCounter(counter)
+    styleCounter(counterDOM)
 }
 
 /**
@@ -100,7 +106,7 @@ function showCounter(counter) {
  * 
  * @param {Number} counter - the counter value 
  */
-function styleCounter(counter) {
+function styleCounter(counterDOM) {
    // if (counter > 0 ) {
         // counterDOM.style.color = 'green'
         counterDOM.classList.toggle('green', counter > 0);
