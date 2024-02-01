@@ -4,21 +4,30 @@ let counter = DEFAULT
 
 const counterDOM = document.querySelector('#counter')
 const btns = document.querySelectorAll('.btn')
+const btnDecr = document.querySelector('#btnDecr')
+const btnReset = document.querySelector('#btnReset')
+const btnIncr = document.querySelector('#btnIncr')
 
 /**
  * Listener
  */
-btns.forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-        if (e.currentTarget.id === 'btnDecr') {
-            onDecreaseClicked()   
-        } else if (e.currentTarget.id === 'btnIncr') {
-            onIncreaseClicked()
-        } else {
-            onResetClicked()
-        }
-    })
-})
+// btns.forEach(function(btn) {
+//     btn.addEventListener('click', function(e) {
+//         if (e.currentTarget.id === 'btnDecr') {
+//             onDecreaseClicked()   
+//         } else if (e.currentTarget.id === 'btnIncr') {
+//             onIncreaseClicked()
+//         } else {
+//             onResetClicked()
+//         }
+//     })
+// })
+
+btnDecr.addEventListener('click', () => onDecreaseClicked())
+btnReset.addEventListener('click', () => onResetClicked())
+btnIncr.addEventListener('click', () => onIncreaseClicked())
+
+
 
 // Handlers
 

@@ -11,26 +11,33 @@
 <body>
     <!-- Μain -->
     <main>
+        <!-- root component -->
         <div class="d-flex flex-column justify-content-center align-items-center">
+            <!-- Word Counter & Actual Counter Component -->
             <div class="text-center">
+                <!-- Word Counter Component-->
                 <div class="mb-4">
                     <span class="display-2">Counter</span>
                 </div>
+                <!-- Actual Counter Component -->
                 <div class="mb-2 py-3 border border-black rounded-pill">
                     <span id="counter" class="text-lg">0</span>
                 </div>
             </div>
+            <!-- Buttons Component-->
             <div class="mt-3 d-flex">
+                <!-- Decrement Button Component -->
                 <div class="me-2">
                     <button type="button" id="btnDecr" class="btn btn-lg btn-outline-primary">Decrease</button>
                 </div>    
+                <!-- Reset Component -->
                 <div class="me-2">
                     <button type="button" id="btnReset" class="btn btn-lg btn-outline-primary">Reset</button>
                 </div>
+                <!-- Increment Component -->
                 <div>
                     <button type="button" id="btnIncr" class="btn btn-lg btn-outline-primary">Increase</button>
-                </div>        
-                    
+                </div>                
             </div>
         </div>
     </main>    
